@@ -1,4 +1,10 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-
+  <view class="userinfo">
+    <button wx:if="{{ !hasUserInfo }}" catch:tap="getUserAvatar">获取用户头像昵称</button>
+    <block wx:else>
+      <image src="{{ userInfo.avatarUrl }}"></image>
+      <text>WXML 要求标签必须是严格闭合的，没有闭合将会导致编译错误。</text>
+    </block>
+  </view>
 </view>
