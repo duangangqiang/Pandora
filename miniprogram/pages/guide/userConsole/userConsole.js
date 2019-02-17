@@ -1,4 +1,3 @@
-// pages/userConsole/userConsole.js
 Page({
 
   data: {

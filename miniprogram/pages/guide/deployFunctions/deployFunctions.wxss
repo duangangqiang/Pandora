@@ -1,5 +1,3 @@
-/* pages/chooseLib/chooseLib.wxss */
-
 @import "../../style/guide.wxss";
 
 .black {

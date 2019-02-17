@@ -12,7 +12,7 @@ Page({
   onLoad() {
     if (!wx.cloud) {
       wx.redirectTo({
-        url: '../chooseLib/chooseLib',
+        url: '../guide/chooseLib/chooseLib',
       });
       return;
     }
@@ -54,13 +54,13 @@ Page({
         console.log('[云函数] [login] user openid: ', res.result.openid);
         app.globalData.openid = res.result.openid;
         wx.navigateTo({
-          url: '../userConsole/userConsole',
+          url: '../guide/userConsole/userConsole',
         });
       },
       fail: (err) => {
         console.error('[云函数] [login] 调用失败', err);
         wx.navigateTo({
-          url: '../deployFunctions/deployFunctions',
+          url: '../guide/deployFunctions/deployFunctions',
         });
       },
     });
@@ -93,7 +93,7 @@ Page({
             app.globalData.imagePath = filePath;
 
             wx.navigateTo({
-              url: '../storageConsole/storageConsole',
+              url: '../guide/storageConsole/storageConsole',
             });
           },
           fail: (e) => {

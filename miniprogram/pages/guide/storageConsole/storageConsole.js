@@ -1,5 +1,3 @@
-// pages/storageConsole/storageConsole.js
-
 const app = getApp();
 
 Page({

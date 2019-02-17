@@ -1,4 +1,3 @@
-// pages/deployFunctions/deployFunctions.js
 Page({
 
   /**

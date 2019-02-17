@@ -1,4 +1,3 @@
-// pages/chooseLib/chooseLib.js
 Page({
 
   /**
