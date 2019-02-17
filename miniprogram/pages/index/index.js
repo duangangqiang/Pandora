@@ -1,18 +1,18 @@
-//index.js
-const app = getApp()
+// index.js
+// const app = getApp();
 
 Page({
   data: {
     hasUserInfo: false,
-    userInfo: {}
+    userInfo: {},
   },
 
-  onLoad: function () {
+  onLoad() {
 
   },
 
   // 获取用户头像
-  getUserAvatar: function () {
-    
-  }
-})
+  getUserAvatar() {
+
+  },
+});

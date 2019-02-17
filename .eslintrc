@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb-base",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "getApp": true,
+    "wx": true,
+    "Page": true,
+    "getCurrentPages": true
+  },
+  "rules": {
+    "no-console": 0,
+    "no-underscore-dangle": 0
+  }
+}

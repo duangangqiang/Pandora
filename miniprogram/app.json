@@ -51,5 +51,10 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": false
+  "debug": false,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取您的位置以记录位置信息到笔记中"
+    }
+  }
 }

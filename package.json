@@ -1,0 +1,29 @@
+{
+  "name": "pandora",
+  "version": "1.0.0",
+  "description": "note anything",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./miniprogram"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duangangqiang/Pandora.git"
+  },
+  "keywords": [
+    "note",
+    "calender"
+  ],
+  "author": "duangangqiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duangangqiang/Pandora/issues"
+  },
+  "homepage": "https://github.com/duangangqiang/Pandora#readme",
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
