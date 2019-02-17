@@ -1,2 +1,13 @@
-<!--pages/todos/todos.wxml-->
-<text>pages/todos/todos.wxml</text>
+<view class="todo-page">
+  <view class="todo-header">
+    <form bindsubmit="">
+      <input type="text" class="todo-input" placeholder="输入待办事项" maxlength="140" confirm-type="done" bindconfirm="confirmInput"/>
+    </form>
+  </view>
+
+  <view class="todos">
+    <view class="todo" wx:for="{{ todos }}" wx:key="item.index">
+      <text class="todo-txt">{{ item.index }}.{{ item.txt }}</text>
+    </view>
+  </view>
+</view>

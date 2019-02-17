@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/todos/todos",
     "pages/index/index",
     "pages/calender/calender",
-    "pages/todos/todos",
     "pages/guide/guide",
     "pages/guide/userConsole/userConsole",
     "pages/guide/storageConsole/storageConsole",
