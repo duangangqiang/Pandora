@@ -1,4 +1,4 @@
-@import "../../style/guide.wxss";
+@import "../../../style/guide.wxss";
 
 .guide .counter {
   margin-top: 50rpx;
