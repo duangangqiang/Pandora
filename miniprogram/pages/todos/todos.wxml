@@ -1,13 +1,19 @@
 <view class="todo-page">
   <view class="todo-header">
-    <form bindsubmit="">
-      <input type="text" class="todo-input" placeholder="输入待办事项" maxlength="140" confirm-type="done" bindconfirm="confirmInput"/>
-    </form>
+    <input type="text" class="todo-input" placeholder="输入待办事项" maxlength="140"
+      confirm-type="done" value="{{ todoInputValue }}" bindconfirm="confirmInput"
+      bindinput="onInputValue"/>
   </view>
 
   <view class="todos">
-    <view class="todo" wx:for="{{ todos }}" wx:key="item.index">
-      <text class="todo-txt">{{ item.index }}.{{ item.txt }}</text>
+    <view class="todo" wx:for="{{ todos }}" wx:key="item.id">
+      <checkbox-group class="todo-checkbox-group" bindchange="onFinishTodo" data-todo-id="{{ item.id }}">
+        <label class="todo-label">
+          <checkbox value="{{ item.id }}" checked="{{ item.finished }}" color="{{ '#5e9be1' }}"/>
+          <text class="todo-txt {{ item.finished ? 'finished' : '' }}">{{ item.txt }}</text>
+        </label>
+      </checkbox-group>
+      <view class="delete-todo-btn" bindtap="onDeleteTodo" data-todo-id="{{ item.id }}">×</view>
     </view>
   </view>
 </view>
