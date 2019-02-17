@@ -29,20 +29,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
-			"list": [
-				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/guide/databaseGuide/databaseGuide",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "guide",
-					"pathName": "pages/guide/guide"
-				}
-			]
+			"current": -1,
+			"list": []
 		}
 	}
 }
