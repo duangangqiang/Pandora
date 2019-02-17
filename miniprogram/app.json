@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/guide/guide",
+    "pages/calender/calender",
+    "pages/todos/todos",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -15,5 +17,39 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "Pandora",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "tabBar": {
+    "selectedColor": "#5e9be1",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "全部",
+        "iconPath": "images/tab-bar/all.png",
+        "selectedIconPath": "images/tab-bar/all-selected.png"
+      },
+      {
+        "pagePath": "pages/calender/calender",
+        "text": "日历",
+        "iconPath": "images/tab-bar/calender.png",
+        "selectedIconPath": "images/tab-bar/calender-selected.png"
+      },
+      {
+        "pagePath": "pages/todos/todos",
+        "text": "待办",
+        "iconPath": "images/tab-bar/todos.png",
+        "selectedIconPath": "images/tab-bar/todos-selected.png"
+      },
+      {
+        "pagePath": "pages/guide/guide",
+        "text": "笔记",
+        "iconPath": "images/tab-bar/note.png",
+        "selectedIconPath": "images/tab-bar/note-selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
 }
