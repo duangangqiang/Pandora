@@ -1,2 +1,30 @@
-<!--pages/calender/calender.wxml-->
-<text>pages/calender/calender.wxml</text>
+<view class="notes-page">
+  <view class="note-filter-box">
+    <form id="note-filter-form" bindsubmit="submitFilterForm">
+      <view class="note-type">
+        <label class="note-type-text" for="note-type-picker">类型:</label>
+        <picker
+          mode="selector"
+          id="note-type-picker"
+          bindchange="changeFilterNoteType"
+          range="{{ filter.noteTypes }}"
+          range-key="key"
+          value="{{ filter.selectedNoteTypeKey }}">
+          <view class="note-type-picker-inner">
+            当前选择：{{ filter.noteTypes[filter.selectedNoteTypeKey] }}
+          </view>
+        </picker>
+      </view>
+      <view class="note-search-text">
+        <input
+          id="note-search-text-input"
+          type="text"
+          maxlength="10"
+          value="{{ filter.searchText }}"
+          placeholder="搜索笔记"
+          bindinput="changeSearchText"/>
+      </view>
+      <button id="note-filter-submit-btn" type="primary" form-type="submit">搜索</button>
+    </form>
+  </view>
+</view>

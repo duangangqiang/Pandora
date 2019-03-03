@@ -10,7 +10,7 @@
 	},
 	"appid": "wxd4a01398a71c774e",
 	"projectname": "pandora",
-	"libVersion": "2.2.5",
+	"libVersion": "2.6.0",
 	"compileType": "miniprogram",
 	"condition": {
 		"search": {
@@ -29,8 +29,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "笔记",
+					"pathName": "pages/calender/calender",
+					"scene": null
+				}
+			]
 		}
 	}
 }

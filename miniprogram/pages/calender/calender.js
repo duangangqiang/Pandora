@@ -1,66 +1,51 @@
-// pages/calender/calender.js
+import notesService from '../../services/notes-service';
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    notes: [],
+    filter: {
+      selectedNoteKey: '0',
+      searchText: '',
+      noteTypes: [
+        { key: '0', value: '全部' },
+        { key: '1', value: '心情' },
+        { key: '2', value: '随手记' },
+        { key: '3', value: '日记' },
+      ],
+    },
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad() {
-
+    this.loadAllNotes();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  // 加载所有笔记
+  loadAllNotes() {
+    notesService.getAllNotes().then((notes) => {
+      this.setData({
+        notes,
+      });
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  // 修改搜索内容
+  changeSearchText(e) {
+    const { value } = e.detail;
+    this.setData({
+      'filter.searchText': value,
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
+  // 修改搜索类型
+  changeFilterNoteType(e) {
+    const { value } = e.detail;
+    this.setData({
+      'filter.selectedNoteTypeKey': value,
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  // 提交表单
+  submitFilterForm(e) {
+    console.log(e.detail.value);
   },
 });

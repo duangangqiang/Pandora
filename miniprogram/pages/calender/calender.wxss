@@ -1,0 +1,30 @@
+.notes-page {
+  display: flex;
+  flex-direction: column;
+}
+.notes-page .note-filter-box {
+  display: flex;
+  align-items: center;
+}
+.notes-page .note-filter-box .note-type {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+}
+.notes-page .note-filter-box .note-type .note-type-text {
+  color: #aaa;
+}
+.notes-page .note-filter-box .note-type #note-type-picker .note-type-picker-inner {
+  color: #333;
+}
+.notes-page .note-filter-box .note-search-text {
+  display: flex;
+}
+.notes-page .note-filter-box .note-search-text #note-search-text-input {
+  width: 100%;
+  height: 100%;
+  padding: 8rpx 12rpx;
+}
+.notes-page .note-filter-box #note-filter-submit-btn {
+  font-size: 24rpx;
+}
